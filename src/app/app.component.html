@@ -17,6 +17,64 @@
             </ion-item>
           </ion-menu-toggle>
 
+          <ng-container *ngIf="session.status==true && session.user.type_id=='1'">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item>
+                <ion-icon slot="start" name="log-in"></ion-icon>
+                <ion-label>
+                  Menu 1
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item>
+                <ion-icon slot="start" name="log-in"></ion-icon>
+                <ion-label>
+                  Menu 2
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item>
+                <ion-icon slot="start" name="log-in"></ion-icon>
+                <ion-label>
+                  Menu 3
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item routerLink="/users">
+                <ion-icon slot="start" name="log-in"></ion-icon>
+                <ion-label>
+                  ผู้ใช้งานทั้งหมด
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ng-container>
+
+
+
+          <ng-container *ngIf="session.status==true && session.user.type_id=='2'">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item>
+                <ion-icon slot="start" name="log-in"></ion-icon>
+                <ion-label>
+                  Menu 1
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item>
+                <ion-icon slot="start" name="log-in"></ion-icon>
+                <ion-label>
+                  Menu 2
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ng-container>
+
+
+
 
           <ion-menu-toggle *ngIf="session.status==false" auto-hide="false">
             <ion-item [routerDirection]="'root'" routerLink="/login">

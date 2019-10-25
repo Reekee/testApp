@@ -15,17 +15,5 @@
     <div>Gender: {{ user.gender_name }}</div>
     <div>Type: {{ user.type_name }}</div>
 
-    <div *ngIf="user.type_id=='1'">
-      <ion-button expand="block">Menu 1</ion-button>
-      <ion-button expand="block">Menu 2</ion-button>
-      <ion-button expand="block">Menu 3</ion-button>
-      <ion-button expand="block" (click)="showUser()">แสดง User</ion-button>
-    </div>
-
-    <div *ngIf="user.type_id=='2'">
-      <ion-button expand="block">Menu 1</ion-button>
-      <ion-button expand="block">Menu 2</ion-button>
-    </div>
-
   </div>
 </ion-content>

@@ -15,7 +15,17 @@
     <ion-label position="floating">รหัสผ่าน</ion-label>
     <ion-input [(ngModel)]="password" type="password"></ion-input>
   </ion-item>
-  <ion-button class="btn-login" color="primary" (click)="login()">เข้าสู่ระบบ</ion-button>
-  <ion-button class="btn-clear" color="light" (click)="clear()">ล้าง</ion-button>
-  <ion-button class="btn-register" expand="block" color="dark" (click)="register()">ลงทะเบียน</ion-button>
+  <ion-grid class="no-padding ion-margin-top">
+    <ion-row>
+      <ion-col class="no-padding padding-right">
+        <ion-button class="btn-login" expand="block" color="primary" (click)="login()">เข้าสู่ระบบ
+        </ion-button>
+      </ion-col>
+      <ion-col class="no-padding padding-left">
+        <ion-button class="btn-clear" expand="block" color="light" (click)="clear()">ล้าง</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button class="btn-register ion-margin-top" expand="block" color="dark" (click)="register()">ลงทะเบียน
+  </ion-button>
 </ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>แก้ไขผู้ใช้</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">ชื่อ</ion-label>
+    <ion-input [(ngModel)]="user_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">นามสกุล</ion-label>
+    <ion-input [(ngModel)]="user_lname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>เพศ</ion-label>
+    <ion-select [(ngModel)]="gender_id" placeholder="เลือกเพศ">
+      <ion-select-option *ngFor="let gender of genders" value="{{ gender.gender_id }}">{{ gender.gender_name }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>สถานภาพ</ion-label>
+    <ion-select [(ngModel)]="status_id" placeholder="เลือกสถานภาพ">
+      <ion-select-option *ngFor="let status of statuss" value="{{ status.status_id }}">{{ status.status_name }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">ชื่อผู้ใช้งาน</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">รหัสผ่าน</ion-label>
+    <ion-input [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>ประเภทผู้ใช้งาน</ion-label>
+    <ion-select [(ngModel)]="type_id" placeholder="เลือกประเภทผู้ใช้งาน">
+      <ion-select-option *ngFor="let type of types" value="{{ type.type_id }}">{{ type.type_name }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-grid class="no-padding ion-margin-top">
+    <ion-row>
+      <ion-col class="no-padding padding-right">
+        <ion-button class="btn-login" expand="block" color="primary" (click)="edit()">ยืนยันแก้ไข
+        </ion-button>
+      </ion-col>
+      <ion-col class="no-padding padding-left">
+        <ion-button class="btn-clear" expand="block" color="light" (click)="loadData(true)">ล้าง</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

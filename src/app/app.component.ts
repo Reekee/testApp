@@ -36,13 +36,14 @@ export class AppComponent {
       this.splashScreen.hide();
 
       this.session.status = await this.session.getStorage("status") || false;
-
+      this.session.user = await this.session.getStorage("user") || {};
     });
   }
   logout() {
     this.session.showConfirm("logout ใช่ไหม ?").then(rs => {
       if (rs) {
         this.session.status = false;
+        this.session.user = {};
         this.session.removeStorage("status");
         this.session.removeStorage("user");
         this.router.navigateByUrl('/home');

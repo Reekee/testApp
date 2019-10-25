@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
       if (res.status == true) {
         this.session.showAlert("Login สำเร็จ").then(rs => {
           this.session.status = true;
+          this.session.user = res.user;
           this.session.setStorage("status", res.status);
           this.session.setStorage("user", res.user);
           this.router.navigateByUrl('/home');
@@ -54,6 +55,6 @@ export class LoginPage implements OnInit {
     this.password = "";
   }
   register() {
-
+    this.router.navigateByUrl('/register');
   }
 }

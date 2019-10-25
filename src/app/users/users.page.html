@@ -10,12 +10,19 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
   <ion-list>
     <ion-item *ngFor="let user of users">
       <ion-label>
         <h2>{{ user.user_name }} {{ user.user_lname }}</h2>
       </ion-label>
+      <ion-buttons slot="end">
+        <ion-button slot="icon-only" color="warning" (click)="edit(user)">
+          <ion-icon name="create"></ion-icon>
+        </ion-button>
+        <ion-button slot="icon-only" color="danger" (click)="del(user)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
 </ion-content>
