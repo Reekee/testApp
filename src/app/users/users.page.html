@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>users ทั้งหมด</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="search" (ionChange)="searching()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-label>
+        <h2>{{ user.user_name }} {{ user.user_lname }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
