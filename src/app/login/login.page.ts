@@ -18,7 +18,6 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
   login() {
-
     this.session.ajax(this.session.api + "login.php", {
       username: this.username,
       password: this.password
@@ -37,18 +36,6 @@ export class LoginPage implements OnInit {
     }).catch(error => {
       this.session.showAlert(error);
     });
-
-
-
-
-    // alert(this.username);
-    // alert(this.password);
-    // if (false) {
-    //   alert("OK");
-    // } else {
-    //   alert("NO");
-    // }
-
   }
   clear() {
     this.username = "";

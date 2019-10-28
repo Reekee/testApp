@@ -12,6 +12,10 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let user of users">
+      <ion-thumbnail slot="start">
+        <img *ngIf="user.image!=''" src="{{session.api}}fileupload/user/{{ user.image }}">
+        <img *ngIf="user.image==''" src="assets/images/user.png">
+      </ion-thumbnail>
       <ion-label>
         <h2>{{ user.user_name }} {{ user.user_lname }}</h2>
       </ion-label>

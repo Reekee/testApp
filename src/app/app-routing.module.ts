@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'users', loadChildren: './users/users.module#UsersPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  { path: 'user-edit/:user_id', loadChildren: './user-edit/user-edit.module#UserEditPageModule' }
+  { path: 'user-edit/:user_id', loadChildren: './user-edit/user-edit.module#UserEditPageModule' },
+  { path: 'checkname', loadChildren: './checkname/checkname.module#ChecknamePageModule' }
 ];
 
 @NgModule({

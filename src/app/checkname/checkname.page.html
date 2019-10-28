@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>เช็คชื่อ</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">รหัสนักเรียน</ion-label>
+    <ion-input [(ngModel)]="student_id"></ion-input>
+  </ion-item>
+  <ion-grid class="no-padding ion-margin-top">
+    <ion-row>
+      <ion-col class="no-padding padding-right">
+        <ion-button class="btn-login" expand="block" color="pink" (click)="save()">บันทึก
+        </ion-button>
+      </ion-col>
+      <ion-col class="no-padding padding-left">
+        <ion-button class="btn-clear" expand="block" color="light" (click)="clear()">ล้าง</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
